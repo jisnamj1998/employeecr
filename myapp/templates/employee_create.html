@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{%block title_block%}
+
+<title>employee-create</title>
+
+{%endblock%}
+{%block main_block%}
+<div class="container border shadow mt-5 p-4 w-50 my-5">
+    
+    <form action="" method="post">
+        <h2 class="text-center">ADD EMPLOYEE</h2>
+        {%csrf_token%}
+        <div class="row">
+            <div class="col-6 mb-2">
+                <label for="">Name</label>
+                {{form.name}}
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Department</label>
+                {{form.department}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mb-2">
+                <label for="">Salary</label>
+                {{form.salary}}
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Location</label>
+                {{form.location}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mb-2">
+                <label for="">Email</label>
+                {{form.email}}
+            </div>
+            <div class="col-6 mb-2">
+                <label for="">Address</label>
+                {{form.address}}
+            </div>
+        </div>
+
+        <button type="submit" class="form-control my-3 btn btn-outline-primary fw-bold">Create</button>
+    </form>
+</div>
+{%endblock%}
